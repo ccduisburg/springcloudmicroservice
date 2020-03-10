@@ -1,0 +1,12 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      sever:
+        native:
+          search-locations: classpath:/
+
+  profiles:
+    active: native
