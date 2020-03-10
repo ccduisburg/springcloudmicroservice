@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@172.17.0.2" uuid="a6c655f9-99e5-4ef8-a294-31c74685e9cc">
+      <database-info product="Cassandra" version="3.11.5" jdbc-version="4.2" driver-name="Cassandra JDBC Driver" driver-version="1.3.4" dbms="CASSANDRA" exact-version="3.11.5" exact-driver-version="1.3">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>cassandra</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

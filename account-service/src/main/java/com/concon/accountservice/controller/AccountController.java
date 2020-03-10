@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 //projelerde direk baglanti olammali. implementation olarak islem yapilmasi daha saglikli
 //instancenin olusmasi ve dis dünyaya acilmasi baska Http üzerinden methodlar yainlanmasi icin  @Restcontroller anotasyonu kiullaniyotruz
@@ -30,13 +32,18 @@ public class AccountController {
     public ResponseEntity<Account> get(@PathVariable("id") String id){
      return ResponseEntity.ok(accountService.get(id));
     }
+    @GetMapping("/accounts")
+    public ResponseEntity<List<Account>> getAll(){
+        return ResponseEntity.ok(accountService.findAll());
+    }
+
     @PostMapping
     public ResponseEntity<Account> save(@RequestBody Account account){
         return ResponseEntity.ok(accountService.save(account));
     }
     @PutMapping
-    public ResponseEntity<Account> update(Account account){
-        return ResponseEntity.ok(accountService.update(account));
+    public ResponseEntity<Account> update(@PathVariable("id") String id,@RequestBody Account account){
+        return ResponseEntity.ok(accountService.update(id,account));
     }
     @DeleteMapping
     public void delete(String id){
