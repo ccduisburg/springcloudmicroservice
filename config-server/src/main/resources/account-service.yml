@@ -1,3 +1,15 @@
+server:
+  port: 8501
+
+spring:
+  application:
+    name: account-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8500/eureka/
+
+
 spcloud:
   cassandra:
     contact:
@@ -6,5 +18,5 @@ spcloud:
     keyspace:
       name: springcloud
 
-    password: cassandra
+    password: password
     username: cassandra
