@@ -22,6 +22,13 @@ public class Account implements Serializable {
     private String id= UUID.randomUUID().toString();
     @Column(value="uname")
     private String username;
+    @Column(value="name")
+    private String name;
+    @Column(value="surname")
+    private String surname;
+    @Column(value="bith_date")
+    private Date birthDate;
+
     @Column(value="email")
     private String email;
     @Column(value="pwd")
@@ -41,9 +48,12 @@ public class Account implements Serializable {
         this.id = id;
     }
 
-    public Account(String id, String username, String email, String password, Date createdAt, Boolean active) {
+    public Account(String id, String username, String name, String surname, Date birthDate, String email, String password, Date createdAt, Boolean active) {
         this.id = id;
         this.username = username;
+        this.name = name;
+        this.surname = surname;
+        this.birthDate = birthDate;
         this.email = email;
         this.password = password;
         this.createdAt = createdAt;

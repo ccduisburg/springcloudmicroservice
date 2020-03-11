@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.concon</groupId>
+    <artifactId>ticket-service</artifactId>
+    <version>10.0.1</version>
+
     <parent>
         <artifactId>service-parent</artifactId>
         <groupId>com.concon</groupId>
         <version>10.0.1</version>
         <relativePath>../service-parent/pom.xml</relativePath>
     </parent>
-    <groupId>com.concon</groupId>
-    <artifactId>account-service</artifactId>
-    <version>10.0.1</version>
-    <name>account-service</name>
-    <description>Account Service</description>
+
+    <name>ticket-service</name>
+    <description>Ticket Service</description>
 
     <properties>
         <java.version>11</java.version>
@@ -29,10 +33,7 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-cassandra</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.codahale.metrics</groupId>
             <artifactId>metrics-core</artifactId>
@@ -64,5 +65,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
