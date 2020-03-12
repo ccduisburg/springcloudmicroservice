@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: ticket-service
+  datasource:
+    url: jdbc:mysql://172.23.0.3:3306/microservice-app
+    username: root
+    password: sp-cloud
+  jpa:
+    hibernate:
+        ddl-auto: update
 eureka:
   client:
     serviceUrl:

@@ -1,16 +1,12 @@
 package com.concon.accountservice.controller;
 
 import com.concon.accountservice.dto.AccountDto;
-import com.concon.accountservice.entity.Account;
 import com.concon.accountservice.service.AccountService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 //projelerde direk baglanti olammali. implementation olarak islem yapilmasi daha saglikli

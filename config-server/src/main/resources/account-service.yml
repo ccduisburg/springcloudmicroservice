@@ -13,10 +13,10 @@ eureka:
 spcloud:
   cassandra:
     contact:
-      point: 172.17.0.2
+      point: 172.23.0.2
     port: 9042
     keyspace:
       name: springcloud
 
-    password: password
+    password: cassandra
     username: cassandra

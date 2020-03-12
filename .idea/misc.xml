@@ -9,6 +9,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/service-common/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="11.0.5" project-jdk-type="JavaSDK" />
 </project>

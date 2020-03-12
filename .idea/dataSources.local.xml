@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="@172.17.0.2" uuid="ba111774-3520-42e3-873d-f49b68c3494c">
+    <data-source name="@172.23.0.2" uuid="ba111774-3520-42e3-873d-f49b68c3494c">
       <database-info product="Cassandra" version="3.11.5" jdbc-version="4.2" driver-name="Cassandra JDBC Driver" driver-version="1.3.4" dbms="CASSANDRA" exact-version="3.11.5" exact-driver-version="1.3">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>cassandra</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="@172.23.0.3" uuid="3e9d17ee-d77d-4e2e-a302-cdc7186b0137">
+      <database-info product="MySQL" version="8.0.19" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="8.0.19" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" negative="1" />

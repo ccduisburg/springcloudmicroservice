@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -16,6 +17,7 @@
       <module name="account-service" target="11" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="service-common" target="1.5" />
       <module name="service-parent" target="11" />
       <module name="sp-coud" target="11" />
       <module name="ticket-service" target="11" />

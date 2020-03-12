@@ -1,7 +1,10 @@
 package com.concon.entity;
 
+import lombok.Getter;
+
+@Getter
 public enum TicketStatus {
-   OPEN("Acik"),
+    OPEN("Acik"),
     IN_PROGRESS("Calisiyor"),
     RESOLVED("Cözüldü"),
     CLOSED("Kapandi");
