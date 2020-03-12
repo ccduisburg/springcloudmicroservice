@@ -7,8 +7,8 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration //bu class ta Bean lari oluturup kullanmak icin olusturuyoruz
-@EnableJpaRepositories
 @EnableElasticsearchRepositories
+@EnableJpaRepositories("com.concon")
 public class TicketConfiguration {
     @Bean
     public ModelMapper modelMapper(){

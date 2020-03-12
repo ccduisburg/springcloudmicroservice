@@ -9,10 +9,14 @@ spring:
     username: root
     password: sp-cloud
   jpa:
+    database: mysql
     hibernate:
         ddl-auto: update
+
 eureka:
   client:
+    instance:
+      hostname: http://localhost
     serviceUrl:
       defaultZone: http://localhost:8500/eureka/
 
