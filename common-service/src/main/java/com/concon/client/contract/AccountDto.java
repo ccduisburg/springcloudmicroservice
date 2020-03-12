@@ -1,13 +1,11 @@
-package com.concon.accountservice.dto;
+package com.concon.client.contract;
 
 import lombok.Data;
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 
 import java.util.Date;
 
 @Data
 public class AccountDto {
-    @PrimaryKey
     private String id;
 
     private String username;
@@ -20,7 +18,7 @@ public class AccountDto {
 
     private String email;
 
-
+public String getNameSurname(){
+    return this.name+" "+this.surname;
 }
-
-
+}

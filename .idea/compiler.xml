@@ -10,14 +10,16 @@
         <module name="account-service" />
         <module name="config-server" />
         <module name="eureka-server" />
+        <module name="common-service" />
         <module name="ticket-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account-service" target="11" />
+      <module name="common-service" target="11" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
-      <module name="service-common" target="1.5" />
+      <module name="service-common11" target="11" />
       <module name="service-parent" target="11" />
       <module name="sp-coud" target="11" />
       <module name="ticket-service" target="11" />
@@ -26,8 +28,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="account-service" options="-parameters" />
+      <module name="common-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="service-common11" options="-parameters" />
       <module name="ticket-service" options="-parameters" />
     </option>
   </component>
