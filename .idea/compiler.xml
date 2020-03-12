@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="account-service" />
-        <module name="config-server" />
         <module name="eureka-server" />
-        <module name="common-service" />
+        <module name="notification-service" />
+        <module name="config-server" />
         <module name="ticket-service" />
+        <module name="common-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="common-service" target="11" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="notification-service" target="11" />
       <module name="service-common11" target="11" />
       <module name="service-parent" target="11" />
       <module name="sp-coud" target="11" />
@@ -31,6 +33,7 @@
       <module name="common-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
       <module name="service-common11" options="-parameters" />
       <module name="ticket-service" options="-parameters" />
     </option>

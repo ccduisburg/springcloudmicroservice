@@ -1,4 +1,4 @@
-package com.concon.client.contract;
+package com.concon.client;
 
 import lombok.Data;
 

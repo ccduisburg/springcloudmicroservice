@@ -2,7 +2,7 @@ package com.concon.accountservice.service;
 
 import com.concon.accountservice.entity.Account;
 import com.concon.accountservice.repository.AccountRepository;
-import com.concon.client.contract.AccountDto;
+import com.concon.client.AccountDto;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Pageable;

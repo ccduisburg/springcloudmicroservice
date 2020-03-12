@@ -12,7 +12,15 @@ spring:
     database: mysql
     hibernate:
         ddl-auto: update
+  rabbitmq:
+    username: guest
+    password: guest
 
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: msqueue
 eureka:
   client:
     instance:

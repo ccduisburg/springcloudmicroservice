@@ -1,7 +1,7 @@
 package com.concon.accountservice.controller;
 
 import com.concon.accountservice.service.AccountService;
-import com.concon.client.contract.AccountDto;
+import com.concon.client.AccountDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;

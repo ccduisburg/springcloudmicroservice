@@ -1,7 +1,7 @@
 package com.concon.service.impl;
 
+import com.concon.client.AccountDto;
 import com.concon.client.AccountServiceClient;
-import com.concon.client.contract.AccountDto;
 import com.concon.dto.TicketDto;
 import com.concon.entity.PriorityType;
 import com.concon.entity.Ticket;
@@ -9,9 +9,9 @@ import com.concon.entity.TicketStatus;
 import com.concon.entity.es.TicketModel;
 import com.concon.repository.TicketRepository;
 import com.concon.repository.es.TicketElasticRepository;
+import com.concon.service.TicketNotificationService;
 import com.concon.service.TicketService;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +27,7 @@ public class TicketServiceIml implements TicketService {
 
     private final TicketElasticRepository ticketElasticRepository;
     private final TicketRepository ticketRepository;
-    private final ModelMapper modelMapper;
+    private final TicketNotificationService ticketNotificationService;
     private final AccountServiceClient accountServiceClient;
 
 
@@ -64,7 +64,9 @@ public class TicketServiceIml implements TicketService {
         ticketElasticRepository.save(model);
         // olusan nesneyi dönüstür
         ticketDto.setId(ticket.getId());
-       return null;
+        //Kuyruga Notification u yaz
+        ticketNotificationService.sendToQueue(ticket);
+       return ticketDto;
     }
 
     @Override
