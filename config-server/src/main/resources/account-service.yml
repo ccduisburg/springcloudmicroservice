@@ -4,6 +4,21 @@ server:
 spring:
   application:
     name: account-service
+  zipkin:
+    base-url: http://localhost:9411/
+
+  boot:
+    admin:
+      client:
+        url: ${SPRING_BOOT_ADMIN_SERVER_URL:http://localhost:8508}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
 eureka:
   client:
     serviceUrl:
@@ -13,7 +28,7 @@ eureka:
 spcloud:
   cassandra:
     contact:
-      point: 172.23.0.2
+      point: localhost
     port: 9042
     keyspace:
       name: springcloud
