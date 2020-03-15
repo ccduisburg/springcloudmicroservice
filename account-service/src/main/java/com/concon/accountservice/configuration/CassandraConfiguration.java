@@ -11,7 +11,7 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 @EnableCassandraRepositories
 public class CassandraConfiguration  extends AbstractCassandraConfiguration {
 
-    @Value("${spcloud.cassandra.url.keyspace.name}")
+    @Value("${spcloud.cassandra.keyspace.name}")
     private String keySpaceName;
 
     @Value("${spcloud.cassandra.username}")
@@ -22,7 +22,7 @@ public class CassandraConfiguration  extends AbstractCassandraConfiguration {
 
     @Value("${spcloud.cassandra.contact.point}")
     private String contactPoint;
-    @Value("${spcloud.cassandra.contact.port}")
+    @Value("${spcloud.cassandra.port}")
     private int contactPort;
 
     @Override

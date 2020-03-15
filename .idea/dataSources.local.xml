@@ -14,8 +14,8 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="@172.20.0.2" uuid="3e9d17ee-d77d-4e2e-a302-cdc7186b0137">
-      <database-info product="MySQL" version="5.7.28" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.7.28" exact-driver-version="8.0">
+    <data-source name="microservice-app@localhost" uuid="3e9d17ee-d77d-4e2e-a302-cdc7186b0137">
+      <database-info product="MySQL" version="8.0.19" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="8.0.19" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

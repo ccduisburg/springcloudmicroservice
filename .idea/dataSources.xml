@@ -7,11 +7,11 @@
       <jdbc-driver>com.dbschema.CassandraJdbcDriver</jdbc-driver>
       <jdbc-url>jdbc:cassandra://localhost:9042</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="@172.20.0.2" uuid="3e9d17ee-d77d-4e2e-a302-cdc7186b0137">
+    <data-source source="LOCAL" name="microservice-app@localhost" uuid="3e9d17ee-d77d-4e2e-a302-cdc7186b0137">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://172.20.0.2:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/microservice-app</jdbc-url>
     </data-source>
   </component>
 </project>
