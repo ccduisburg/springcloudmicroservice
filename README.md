@@ -5,4 +5,6 @@ Bedarf
      Docker Desktop
      IDE (IntelliJ)
      
+     Schema
+      https://github.com/ccduisburg/springcloudmicroservice/blob/master/docs/arch.png
      
