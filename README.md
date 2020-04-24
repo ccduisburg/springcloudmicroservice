@@ -1,10 +1,12 @@
 Dies ist ein Beispiel für ein Springboot-Miscroservice-Projekt with java.
-Bedarf
 
+
+     Bedarf:
+     
      Java JDK 11
      Docker Desktop
      IDE (IntelliJ)
      
-     Schema
+     Project Schema
       https://github.com/ccduisburg/springcloudmicroservice/blob/master/docs/arch.png
      
