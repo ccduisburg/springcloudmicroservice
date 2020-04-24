@@ -102,10 +102,6 @@
                         </image>
                     </images>
                 </configuration>
-
-                <!-- Connect start/stop to pre- and
-                     post-integration-test phase, respectively if you want to start
-                     your docker containers during integration tests -->
                 <executions>
                     <execution>
                         <id>build</id>
@@ -118,5 +114,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

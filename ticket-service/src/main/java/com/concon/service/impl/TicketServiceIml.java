@@ -11,7 +11,6 @@ import com.concon.repository.TicketRepository;
 import com.concon.repository.es.TicketElasticRepository;
 import com.concon.service.TicketNotificationService;
 import com.concon.service.TicketService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 //gerekli dependency ile beraber consructer lar eklemek icin
-@RequiredArgsConstructor
 public class TicketServiceIml implements TicketService {
 //elastiksearch ve mysql e beraber kayit yapmak istiyoruz
 
@@ -29,6 +27,13 @@ public class TicketServiceIml implements TicketService {
     private final TicketRepository ticketRepository;
     private final TicketNotificationService ticketNotificationService;
     private final AccountServiceClient accountServiceClient;
+
+    public TicketServiceIml(TicketElasticRepository ticketElasticRepository, TicketRepository ticketRepository, TicketNotificationService ticketNotificationService, AccountServiceClient accountServiceClient) {
+        this.ticketElasticRepository = ticketElasticRepository;
+        this.ticketRepository = ticketRepository;
+        this.ticketNotificationService = ticketNotificationService;
+        this.accountServiceClient = accountServiceClient;
+    }
 
 
     @Override

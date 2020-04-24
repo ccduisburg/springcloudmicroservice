@@ -14,7 +14,7 @@ import org.springframework.util.Assert;
 import java.util.Optional;
 
 // baska bir classta kullanabilmek icin @Component @Repository  olabilir di
-@RequiredArgsConstructor
+
 @Service
 public class AccountService {
     // Datayi veritabanindanmi veya kuyruk islemleri burda belirliyoruz.
@@ -22,6 +22,11 @@ public class AccountService {
 
     private final AccountRepository accountRepository;
     private final ModelMapper modelMapper;
+
+    public AccountService(AccountRepository accountRepository, ModelMapper modelMapper) {
+        this.accountRepository = accountRepository;
+        this.modelMapper = modelMapper;
+    }
 
     public AccountDto get(String id){
         Account account=accountRepository.findById(id).orElseThrow(()->new IllegalArgumentException());

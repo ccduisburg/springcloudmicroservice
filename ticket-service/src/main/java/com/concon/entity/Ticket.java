@@ -7,38 +7,45 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(of={"id"})
+@Getter
+@Setter
 @Table(name="ticket")
 public class Ticket extends BaseEntityModel{
-    @Getter
     @Id
     @GeneratedValue(generator="UUID")
     @GenericGenerator(name="UUID",strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name="id")
     private String id;
-    @Getter
-    @Setter
+
     @Column(name="description",length = 600)
     private String description;
-    @Getter
-    @Setter
+
     @Column(name="notes",length = 4000)
     private String notes;
-    @Getter
-    @Setter
+
     @Column(name="assignee",length = 50)
     private String assignee;
-    @Getter
-    @Setter
+
     private Date ticketDate;
-    @Getter
-    @Setter
+
     @Enumerated(EnumType.ORDINAL)
     private PriorityType priortyType;
-    @Getter
-    @Setter
+
     @Enumerated(EnumType.ORDINAL)
     private TicketStatus ticketStatus;
+
+    public Ticket(String id, String description, String notes, String assignee, Date ticketDate, PriorityType priortyType, TicketStatus ticketStatus) {
+        this.id = id;
+        this.description = description;
+        this.notes = notes;
+        this.assignee = assignee;
+        this.ticketDate = ticketDate;
+        this.priortyType = priortyType;
+        this.ticketStatus = ticketStatus;
+    }
+
+    public Ticket() {
+
+    }
 }

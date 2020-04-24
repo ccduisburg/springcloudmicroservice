@@ -6,7 +6,7 @@
         <artifactId>sp-cloud-app</artifactId>
         <groupId>com.concon</groupId>
         <version>10.0.1</version>
-        <relativePath>../pom.xml</relativePath>
+          <relativePath/>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>

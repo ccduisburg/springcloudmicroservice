@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 //instancenin olusmasi ve dis dünyaya acilmasi baska Http üzerinden methodlar yainlanmasi icin  @Restcontroller anotasyonu kiullaniyotruz
 @RestController
 @RequestMapping("account") // http üzerinde yayin yapacagimiz adresi belirlemek icin kullandigimiz anotation
-@RequiredArgsConstructor
+
 public class AccountController {
 /**
 * localhost:8080/account
@@ -26,8 +26,12 @@ public class AccountController {
     //yaptigi is acisindan yukaridaki @Autowired anotation örnegindenfarkli degildir
     private final AccountService accountService;
 
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
+    }
 
-   @GetMapping("/{id}")
+
+    @GetMapping("/{id}")
     public ResponseEntity<AccountDto> get(@PathVariable("id") String id){
      return ResponseEntity.ok(accountService.get(id));
     }
